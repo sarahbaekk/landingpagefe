@@ -5,8 +5,9 @@ document.getElementById("signupForm").addEventListener("submit", function (event
 
   // 🔁 Smart environment check
   const baseURL = window.location.hostname === "localhost"
-    ? "http://localhost:8080"
-    : "https://wambo.onrender.com";
+  ? "http://localhost:8080"
+  : "https://landingpagebe.onrender.com";
+
 
   // Log to console (for testing)
   console.log("Collected email:", email);
