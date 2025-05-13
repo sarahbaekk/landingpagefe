@@ -15,11 +15,14 @@ document.getElementById("signupForm").addEventListener("submit", function (event
   localStorage.setItem("userEmail", email);
 
   // Send to backend
-  fetch(`${baseURL}/signup`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email: email })
+  fetch('https://wambo-backend.onrender.com/api/signup', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ name: 'Fluffy', type: 'dog' })
   })
+  
     .then(res => res.text())
     .then(message => {
       console.log("Server said:", message);
